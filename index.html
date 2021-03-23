@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        alert("Ovo je kalkulator.");
+
+        var first = parseInt(prompt("Unesite prvi broj"));
+        while(Object.is(first, NaN)){
+            first = parseInt(prompt("Pogresan unos! Unesite prvi broj"));
+        }
+
+        var operation = prompt("Unesi racunsku operaciju: '+' za sabiranje, '-' za oduzimanje, '*' za mnozenje, '/' za deljenje.")
+         while(operation != "+" && operation != "-" && operation != "*" && operation !="/"){
+            operation = prompt("Pogresan unos racunske operacije: '+' za sabiranje, '-' za oduzimanje, '*' za mnozenje, '/' za deljenje.")
+        } 
+
+        var second = parseInt(prompt("Unesite drugi broj"));
+        while(Object.is(second, NaN)){
+            second = parseInt(prompt("Pogresan unos! Unesite prvi broj"));
+        }
+
+        var result;
+
+        if(operation == "+"){
+            result = first + second;
+        }
+        else if (operation == "-"){
+            result = first - second;
+        }
+        else if (operation == "*"){
+            result = first * second;
+        }
+        else if (operation == "/"){
+            result = first / second;
+        }
+        
+        alert("Vas rezultat je: " + result);
+    </script>
+</body>
+</html>
